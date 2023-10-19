@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    h1 {text-align: center;}
+    body {color: white;text-align: left;}
+    li {text-align: left;}
+</style>
+
+<h1>Rekisteröidy</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Rekisteröidy</button>
+</form>
+<br>
+<a href="{% url 'home' %}" class="btn btn-secondary">Palaa kotisivulle</a>
+{% endblock %}

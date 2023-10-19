@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Varmista laitteen poisto</h2>
+  <p>Oletko varma, että haluat poistaa laitteen "{{ object }}"?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Poista laite</button>
+    <a href="{% url 'device_detail' device.id %}" class="btn btn-secondary">Peruuta</a>
+    <br><br>
+  </form>
+{% endblock %}

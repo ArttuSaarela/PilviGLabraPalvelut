@@ -1,0 +1,38 @@
+body {
+    background-color: #292929fe;
+    text-align: center;
+    height: 50%;
+    width: 100%;
+    padding-bottom: 75px;
+}
+
+header {
+    position: fixed;
+    background-color: rgb(0, 105, 217);
+}
+
+h1 {
+    color: white    ;
+    background-color: rgb(0, 105, 217);  
+  }
+
+h2 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+a {
+    color: rgb(0, 105, 217);
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgb(0, 105, 217);
+}

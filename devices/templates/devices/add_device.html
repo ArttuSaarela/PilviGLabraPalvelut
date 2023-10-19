@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Lisää laite</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Lisää laite</button>
+    </form>
+    <br>
+    <a href="{% url 'list_devices' %}" class="btn btn-primary">Takaisin laitelistaan</a>
+    <br><br>
+    <a href="{% url 'home' %}" class="btn btn-primary">Koti</a>
+{% endblock %}

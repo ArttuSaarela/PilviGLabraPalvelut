@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labra Palvelut Pilvi G</title>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'labrapalvelut/Kekw.jpg' %}" type="image/jpg" />
+    <link rel="stylesheet" type="text/css" href="{% static 'labrapalvelut/styles.css' %}">
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+        {% block content %}
+        <!-- Sisältö tulee tänne -->
+        {% endblock %}
+    </main>
+    <footer>
+        {% if user.is_authenticated %}
+            <p>Olet kirjautuneena käyttäjällä {{user.username}}</p>
+        {% endif %}
+        <p>Tehtävä 3. Pilvi G. Kinnunen Janne, Pulkkinen Aku, Saarela Arttu</p> 
+    </footer>
+</body>
+</html>

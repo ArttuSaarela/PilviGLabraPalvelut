@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ device.name }}</h1>
+    <p><strong>Tyyppi:</strong> {{ device.get_device_type_display }}</p>
+    <p><strong>IP-osoite:</strong> {{ device.ip_address }}</p>
+    <p><strong>Linkki:</strong> <a href="{{ device.link }}">{{ device.link }}</a></p>
+    <p><strong>Brändi:</strong> {{ device.brand }}</p>
+    <p><strong>Malli:</strong> {{ device.model }}</p>
+    <p><strong>SSID:</strong> {{ device.ssid }}</p>
+    <p><strong>EPDU Domain:</strong> {{ device.domain }}</p>
+    <!-- ... Voit lisätä muita tietoja samalla tavalla ... -->
+
+    <a href="{% url 'edit_device' device.id %}" class="btn btn-primary">Muokkaa laitteen tietoja</a>
+    <br><br>
+    <a href="{% url 'device_remove' device.id %}" class="btn btn-danger">Poista laite</a>
+    <br><br>
+    <a href="{% url 'list_devices' %}" class="btn btn-primary">Takaisin laitelistaan</a>
+    <br><br>
+    <a href="{% url 'home' %}" class="btn btn-primary">Koti</a>
+    
+{% endblock %}
